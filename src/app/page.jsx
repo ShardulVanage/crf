@@ -40,8 +40,9 @@ const conference = [
     image: meet,
     date: "22 -23 aug ,2023",
     title: "MEET",
-    description: "advance trened in multi sad desciptstudes",
+    description: "International conference on Management and Social Sciences",
     link: "https://icmssc.com/oct-23/",
+    alt: 'img'
 
   },
   {
@@ -49,8 +50,9 @@ const conference = [
     image: meet,
     date: "22 -23 aug ,2023",
     title: "MEET",
-    description: "advance trened in multi sad desciptstudes",
+    description: "International conference on Management and Social Sciences",
     link: "https://icmssc.com/oct-23/",
+    alt: 'img'
 
   },
   {
@@ -58,8 +60,9 @@ const conference = [
     image: meet,
     date: "22 -23 aug ,2023",
     title: "MEET",
-    description: "advance trened in multi sad desciptstudes",
+    description: "International conference on Management and Social Sciences",
     link: "https://icmssc.com/oct-23/",
+    alt: 'img'
 
   },
 
@@ -113,11 +116,10 @@ function CaseStudies() {
                   <Link href={caseStudy.link}>
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
-                      width={100}
-                      height={100}
+
                       src={caseStudy.image}
-                      alt='meet'
-                      className="h-16 w-16"
+                      alt={caseStudy.alt}
+                      className="h-48 w-full rounded-md"
                       unoptimized
                     />
                   </Link>

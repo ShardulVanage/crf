@@ -19,5 +19,5 @@ export function Logo({
   ...props
 }) {
   return (
-    <Image src={logo} height={70} width={70} />)
+    <Image src={logo} alt='logo' height={70} width={70} />)
 }
