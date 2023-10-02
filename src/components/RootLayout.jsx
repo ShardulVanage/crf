@@ -127,12 +127,12 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href=""><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Conference</h1></NavigationItem>
-        <NavigationItem href=""><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>About Us</h1></NavigationItem>
+        <NavigationItem href="/work"><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Conference</h1></NavigationItem>
+        <NavigationItem href="/about"><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>About Us</h1></NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href=""><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Services</h1></NavigationItem>
-        <NavigationItem href=""><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Journals</h1></NavigationItem>
+        <NavigationItem href="/process"><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Services</h1></NavigationItem>
+        <NavigationItem href="/blog"><h1 className='text-5xl font-extrabold text-transparent bg-clip-text hover:bg-gradient-to-br from-sky-500 via-indigo-500 to-red-500 bg-white'>Publication</h1></NavigationItem>
       </NavigationRow>
     </nav>
   )

@@ -1,6 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Header } from '@/componentsx/Header'
+import { Hero } from '@/componentsx/Hero'
+import { Newsletter } from '@/componentsx/Newsletter'
+import { Schedule } from '@/componentsx/Schedule'
+import { Speakers } from '@/componentsx/Speakers'
+import { Sponsors } from '@/componentsx/Sponsors'
+import ImpDate from '@/componentsx/ImpDate'
+
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -74,7 +82,8 @@ function Clients() {
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             We’ve worked with hundreds of amazing people
-          </h2>
+          </h2>npm run dev
+
           <div className="h-px flex-auto bg-white" />
         </FadeIn>
         <FadeInStagger faster>
@@ -213,7 +222,18 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
+    
+      <Header />
+      <main>
+        <Hero />
+        <Speakers />
+        <Schedule />
+        <ImpDate/>
+        <Sponsors />
+        <Newsletter />
+      </main>
+      
+      {/* <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             Empowering Research, Innovation and Association for a better tomorrow.
@@ -242,7 +262,7 @@ export default async function Home() {
 
       <CaseStudies />
 
-      <ContactSection />
+      <ContactSection /> */}
     </>
   )
 }

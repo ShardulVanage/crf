@@ -9,23 +9,35 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
+
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
-import { formatDate } from '@/lib/formatDate'
+
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
+import reward from '@/images/reward.png'
+import reward2 from '@/images/reward2.png'
+import reward3 from '@/images/reward3png.png'
+import reward4 from '@/images/reward4.png'
+import part1 from '@/images/part1.png'
+import part2 from '@/images/part2.png'
+import part3 from '@/images/part3.png'
+import part4 from '@/images/part4.png'
+import part5 from '@/images/part5.png'
+import part6 from '@/images/part6.png'
+
+import g1 from '@/images/gallery/g1.jpg'
+import g2 from '@/images/gallery/g2.jpg'
+import g3 from '@/images/gallery/g3.jpg'
+
+
+
+
 
 function CaseStudies({ caseStudies }) {
   return (
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
+        AWARDS & RECOGNITION
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -45,33 +57,19 @@ function CaseStudies({ caseStudies }) {
                       {caseStudy.client}
                     </h3>
                   </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
+              
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {caseStudy.summary.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                    
+                      <p >{caseStudy.paragraph}</p>
+                   
                   </div>
                   <div className="mt-8 flex">
-                    <Button
-                      href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
-                    >
-                      Read case study
-                    </Button>
+                    
                   </div>
                   {caseStudy.testimonial && (
                     <Blockquote
@@ -92,14 +90,13 @@ function CaseStudies({ caseStudies }) {
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Phobia', part1],
+  ['Family Fund', part2],
+  ['Unseal', part3],
+  ['Mail Smirk', part4],
+  ['Home Work', part5],
+  ['Green Life', part6],
+ 
 ]
 
 function Clients() {
@@ -114,7 +111,7 @@ function Clients() {
         <Border as={FadeIn} />
         <ul
           role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
+          className=" items-center grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
           {clients.map(([client, logo]) => (
             <li key={client} className="group">
@@ -132,28 +129,56 @@ function Clients() {
 }
 
 export const metadata = {
-  title: 'Our Work',
+  title: 'Conference',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    '',
 }
 
 export default async function Work() {
   let caseStudies = await loadMDXMetadata('work')
-
+  let caseStudiess = [
+    {
+      href:"",
+      logo:reward,
+      client:"Presentation Awards",
+      paragraph:"Presentation awards are organized with the intention of valuing one’s contribution to the field and behind the idea of encouraging for more active involvement for the betterment of the industry as a whole.Considering the marks given by the evaluation committee and the Conference Chair, the highest scoring presentations shall be recommended for the following awards. Both Oral presentations and Poster presentations will be evaluated for the awards."
+    },
+    {
+      href:"",
+      logo:reward2,
+      client:"Best Presentation Award",
+      paragraph:"Offered for outstanding presentation considering every presenter of the conference, which is the most inspiring, effective and professional and are delivered through an impactful, authoritative and engaging speaker. Based on the marks given by the evaluation committee for every presentation and Conference Chair’s own reading of the papers, Conference Chair decides which presentation will receive the Best Presentation Award."
+    },
+    {
+      href:"",
+      logo:reward3,
+      client:"Session’s Best Award",
+      paragraph:"Based on the marks given by the evaluation committee including session chair and two evaluation panel members for an every presentation of an each session, Session Chair decides which presentation will receive the Session’s Best Presentation Awards."
+    },
+    {
+      href:"",
+      logo:reward4,
+      client:"Best Student Presentation Award",
+      paragraph:"In order to identify outstanding work by student participants, the Best Student Presentation award will be given for an excellent presentation of the conference, and award winner must be registered as a student and also must be a student. Based on the marks given by the evaluation committee for an every presentation of student presenters of the conference, and Conference Chair’s own reading of the papers, Conference Chair decides which presentation will receive the Best Student Presentation Award."
+    }
+  ]
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Conference"
+        title="Gallery"
       >
-        <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
-        </p>
+        
       </PageIntro>
+      <div className='flex  sm:flex-row flex-col  w-full items-center justify-center  gap-6 mr-28 [&>Image]:rounded-md '>
+<Image alt='g1' src={g1} height={100} width={350}/>
+<Image alt='g2' src={g2} height={100} width={350}/>
+<Image alt='g3'src={g3} height={100} width={350}/>
 
-      <CaseStudies caseStudies={caseStudies} />
+
+        </div>
+
+      <CaseStudies caseStudies={caseStudiess} />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"

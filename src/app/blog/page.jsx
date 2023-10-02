@@ -9,6 +9,24 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
+import img from '@/images/publication/(IJERE).png'
+import img1 from '@/images/publication/Decision_Analytics_journal.jpg'
+import img2 from '@/images/publication/e-Prime.jpg'
+import img3 from '@/images/publication/e3sconf.jpg'
+import img4 from '@/images/publication/IJIRSS.png'
+import img5 from '@/images/publication/International_Journal_of.png'
+import img6 from '@/images/publication/JNS.png'
+import img7 from '@/images/publication/Journal_of_Survey_in_Fisheries_Sciences.png'
+import img8 from '@/images/publication/Microprocessors-and-Microsystems.jpg'
+import img9 from '@/images/publication/optical-and-quantum-electronics.jpg'
+import img10 from '@/images/publication/journalof_autonomous_intelligence.jpg'
+import img11 from '@/images/publication/Oriente Moderno.png'
+import img12 from '@/images/publication/proceedings_on_engineering_sciences.png'
+import img13 from '@/images/publication/Social Science_01.png'
+import img14 from '@/images/publication/taylor.jpg'
+import img15 from '@/images/publication/WhatsApp Image 2023-05-22 at 3.17.39 PM (1).jpeg'
+
+
 
 export const metadata = {
   title: 'Blog',
@@ -17,14 +35,104 @@ export const metadata = {
 }
 
 export default async function Blog() {
-  let articles = await loadMDXMetadata('blog')
-
+  let article = await loadMDXMetadata('blog')
+let articles = [
+  {
+    href:"https://www.sciencedirect.com/journal/e-prime-advances-in-electrical-engineering-electronics-and-energy",
+    title:"e-Prime - Advances in Electrical Engineering, Electronics and Energy",
+   image:img2,
+    issn:"ISSN:ISSN:2772-6711xc",
+  } ,
+  {
+    href:"https://meetconferences.com/publication_new.php?id=3",
+    title:"Journal of Autonomous Intelligence",
+   image:img10,
+    issn:"ISSN:E-ISSN : 2630-5046",
+  } ,
+  {
+    href:"https://www.sciencedirect.com/journal/microprocessors-and-microsystems/about/aims-and-scope",
+    title:"Microprocessors and Microsystems",
+   image:img8,
+    issn:"ISSN:ISSN : 1872-9436",
+  } ,
+  {
+    href:"https://www.springer.com/journal/11082",
+    title:" Optical and quantum electronic",
+   image:img9,
+    issn:"ISSN:E-ISSN : 1572-817X",
+  } ,
+  {
+    href:"https://www.taylorfrancis.com/series",
+    title:"Proceedings on Engineering Sciences",
+   image:img12,
+    issn:"ISSN:ISSN : 2620-2832 ",
+  } ,
+  {
+    href:"https://meetconferences.com/publication_new.php?id=3",
+    title:"Journal of Survey in Fisheries Science",
+   image:img7,
+    issn:"ISSN:E-ISSN : 2368-7487",
+  } ,
+  {
+    href:"https://www.taylorfrancis.com/series",
+    title:"Taylor and Francis Conferene Proceedings",
+   image:img14,
+    issn:"ISSN:",
+  } ,
+  {
+    href:"https://www.sciencedirect.com/journal/decision-analytics-journal",
+    title:"Decision Analytics Journal",
+   image:img1,
+    issn:"ISSN:ISSN : 2772-6622",
+  } ,
+  {
+    href:"https://qtanalytics.in/journals/index.php/IJERR/index",
+    title:"International Journal of Experimental Research and Review",
+   image:img5,
+    issn:"ISSN:ISSN- 2455-4855",
+  } ,
+  {
+    href:"https://rgsa.emnuvens.com.br/rgsa",
+    title:"Revista de Gestao Social e Ambiental",
+   image:img15,
+    issn:"ISSN:ISSN- 1981-982X",
+  } ,
+  {
+    href:"https://ijere.iaescore.com/index.php/IJERE",
+    title:" International Journal of Evaluation and Research in Education",
+   image:img,
+    issn:"ISSN:ISSN:2620-5440",
+  } ,
+  {
+    href:"http://ijirss.com/index.php/ijirss",
+    title:"International Journal of Innovative Research and Scientific Studies",
+   image:img4,
+    issn:"ISSN:ISSN-2617-6548",
+  } ,
+  {
+    href:"https://namibian-studies.com/index.php/JNS/si",
+    title:" Journal of Namibian Studies",
+   image:img6,
+    issn:"2197-5523",
+  } ,
+  {
+    href:"https://brill.com/view/journals/ormo/ormo-overview.xml?language=en",
+    title:" Oriente Moderno",
+   image:img11,
+    issn:"ISSN:ISSN- 2213-8617",
+  } ,
+  {
+    href:"https://www.mdpi.com/journal/socsci",
+    title:"Social Sciences",
+   image:img13,
+    issn:" ISSN:ISSN-2076-0760",
+  } ,
+]
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="Publication" title="The latest Publication">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+        Note: for more information on journals kindly connect with journals@coreresearchfoundation.com
         </p>
       </PageIntro>
 
@@ -42,29 +150,22 @@ export default async function Blog() {
                       <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                         <dt className="sr-only">Published</dt>
                         <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
-                          <time dateTime={article.date}>
-                            {formatDate(article.date)}
-                          </time>
+                          
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                          <div className="flex-none overflow-hidden rounded-sm border  bg-neutral-100">
                             <Image
                               alt=""
-                              {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
+                              src={article.image}
+                              className="h-48 w-36 object-cover border-solid border-2 border-black"
                             />
                           </div>
-                          <div className="text-sm text-neutral-950">
-                            <div className="font-semibold">
-                              {article.author.name}
-                            </div>
-                            <div>{article.author.role}</div>
-                          </div>
+                        
                         </dd>
                       </dl>
                       <p className="mt-6 max-w-2xl text-base text-neutral-600">
-                        {article.description}
+                        {article.issn}
                       </p>
                       <Button
                         href={article.href}
