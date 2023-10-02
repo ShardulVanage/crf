@@ -12,6 +12,33 @@ import { TagList, TagListItem } from '@/components/TagList'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
+
+import c1 from '@/images/committee/c1.jpg'
+import c2 from '@/images/committee/c2.jpg'
+import c3 from '@/images/committee/c3.jpg'
+import c4 from '@/images/committee/c4.jpg'
+import c5 from '@/images/committee/c5.jpg'
+import c6 from '@/images/committee/c6.jpg'
+import c7 from '@/images/committee/c7.jpg'
+import c8 from '@/images/committee/c8.jpg'
+import c9 from '@/images/committee/c9.jpg'
+import c10 from '@/images/committee/c19.jpg'
+import c11 from '@/images/committee/c11.jpg'
+import c12 from '@/images/committee/c12.jpg'
+import c13 from '@/images/committee/c13.jpg'
+import c14 from '@/images/committee/c14.jpg'
+import c15 from '@/images/committee/c15.png'
+import c16 from '@/images/committee/c16.jpg'
+import c17 from '@/images/committee/c17.jpg'
+import c18 from '@/images/committee/c18.jpg'
+import c19 from '@/images/committee/c19.jpg'
+import c20 from '@/images/committee/c20.jpg'
+import c21 from '@/images/committee/c21.jpg'
+import c22 from '@/images/committee/c22.jpg'
+import c23 from '@/images/committee/c23.jpg'
+import Image from 'next/image'
+
 
 function Section({ title, image, children }) {
   return (
@@ -43,134 +70,162 @@ function Section({ title, image, children }) {
   )
 }
 
-function Discover() {
+
+function Committee() {
+  const people = [
+    {
+      name: 'ENGR. JOSE MARIE B. DIPAY, PCpE',
+    
+      role: 'RESEARCH MANAGEMENT CLUSTER COORDINATOR FOR TECHNOLOGY PROGRAMS',
+      description:"RESEARCH MANAGEMENT OFFICE, INSTITUTE OF TECHNOLOGY, POLYTECHNIC UNIVERSITY OF THE PHILIPPINES",
+
+      imageUrl: c1,
+    },{
+      name: 'JAREK BOILO T. CABAUTAN',
+      role: 'CEO and Founder',
+      description:"INFORMATION TECHNOLOGY CONSORTIUM OF THE PHILIPPINES",
+      imageUrl: c2,
+     },{
+      name: 'DR. MOHAMMAD KAMRUL HASAN',
+      role: 'SENIOR LECTURE',
+      description:"NETWORK AND COMMUNICATION TECHNOLOGY RESEARCH CLUSTER, CENTER FOR CYBER SECURITY, UNIVERSITI KEBANGSAANNETWORK AND COMMUNICATION TECHNOLOGY RESEARCH MALAYS",
+      imageUrl: c3,
+    },
+    {
+      name: 'ISIDRO L. DURAN',
+      role: 'Professor',
+      description:"Agoo,2504 La Union Philippines",
+      imageUrl:
+      c4,  
+      },
+      {
+      name: 'Phan Cong Vinh',
+      role: 'Vice Dean',
+      description:"Faculty of Information Technology Nguyen Tat Thanh University Vietnam",
+      imageUrl:
+      c5,    },{
+      name: 'Dr. Ibrahim Sameer',
+      role: 'Part Time Lecturer',
+      description:"MAPS College Republic of Maldives ",
+      imageUrl:
+      c6,    },{
+      name: 'RICHARD N. MONREAL, DIT',
+      role: 'Associate Professor',
+      description:"Trinity University of Asia Quezon City Philippines",
+      imageUrl:
+      c7,    },{
+      name: 'Dr.Ryan Soriente Evangelista',
+      role: 'Professorial Chair holder in Science, Technology, and Engineering',
+      description:"Polytechnic University of the Philippines ",
+      imageUrl:
+c8,    },{
+      name: 'S Rahul',
+      role: 'Assistant Professor',
+      description:"KG Reddy College of Engineering and Technology  India",
+      imageUrl:
+c9,    },{
+      name: ' PROF. TS. DR. AINUDDIN WAHID BIN ABDUL WAHAB',
+      role: 'Professor',
+      description:"Deputy Dean of Research Universiti MalayaMalaysia",
+      imageUrl:c10,
+    },{
+      name: 'DR. MAIZATUL AKMAR BINTI ISMAIL',
+      role: 'Associate Professor',
+      description:"Faculty of Computer Science and Information Technology  Universiti Malaya Malaysia",
+      imageUrl:c11,
+    },{
+      name: 'ELIZA B. AYO',
+      role: 'Department Head',
+      description:"Head, Computer Education Dept. Centro Escolar University Philippines",
+      imageUrl:c12,
+    },{
+      name: 'Josan Tamayo',
+      role: 'Program Head',
+      description:"Centro Escolar University Philippines",
+      imageUrl:c13,
+    },{
+      name: 'Mowafaq Salem Alzboon',
+      role: 'Assistant Professor',
+      description:"Faculty of Science and Information Technology  Jadara University Jordan",
+      imageUrl:c14
+    },{
+      name: 'JEHAN DELGADO BULANADI',
+      role: 'Internal Review Board (IRB) Member',
+      description:"Holy Angel University Angeles City Philippines",
+      imageUrl:c15
+    },
+    {
+      name: 'Dr Ali Ahmad Mohammad Alawneh',
+      role: 'Associate Professor',
+      description:"Director of Quality Assurance &amp; Accreditation Philadelphia University Jordan",
+      imageUrl:c16
+    }, {
+      name: 'DR. ADELEH ASEMI ZAVAREH',
+      role: 'Senior Lecturer',
+      description:"Faculty of Computer Science and Information Technology  Department of Software Engineering Universiti Malaya   Malaysia",
+      imageUrl:c17
+    }, {
+      name: 'De Guzman, Edwin Santos',
+      role: 'Teaching Academic Staff',
+      description:"College of Information & Computing Sciences    University of Santo Tomas   Espana, Manila,Philippines ",
+      imageUrl:c18
+    }, {
+      name: 'Dr. Teh Ying Wah',
+      role: 'Professor',
+      description:"Department of Information System  Faculty of Computer Science and Information Technology Universiti Malaya Malaysia",
+      imageUrl:c19
+    }, {
+      name: 'DR. MOHAMAD NIZAM BIN AYUB',
+      role: 'Associate Professor ',
+      description:"Department of Computer System & Technology  Universiti Malaya  Malaysia",
+      imageUrl:c20
+    }, {
+      name: 'Dr. JAY-ARR C. TAYAO',
+      role: 'Professorial Lecturer',
+      description:"Business, I.T. & Education   City University of Paris  Paris, France",
+      imageUrl:c21
+    }, {
+      name: 'Dr Aris Ignacio',
+      role: 'Dean',
+      description:"Dean of the College of Information Technology and Engineering  Southville International School and Colleges Philippines",
+      imageUrl:c22
+    },{
+      name: '  DR. MARY ANN G. VALENTINO',
+      role: 'Associate Professor',
+      description:"Research Coordinator National University Baliwag Philippines",
+      imageUrl:c23  
+    },
+    // More people...
+  ]
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
-        </p>
-        <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
-        </p>
-        <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
-        </p>
-      </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
-      <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
-      </TagList>
-    </Section>
-  )
-}
-
-function Build() {
-  return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
-        </p>
-        <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
-        </p>
-      </div>
-
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-        className="mt-12"
-      >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
-    </Section>
-  )
-}
-
-function Deliver() {
-  return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
-        </p>
-        <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on Twitter.
-        </p>
-        <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
-        </p>
-      </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
-      <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
-        </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
-        </ListItem>
-      </List>
-    </Section>
+    <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  my-12 mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40 ">
+      {people.map((person) => (
+        <li
+          key={person.email}
+          className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow drop-shadow-2xl"
+        >
+          <div className="flex flex-1 flex-col p-8">
+            <Image className="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src={person.imageUrl} width={100} height={100} alt="1" />
+            <h3 className="mt-6 text-sm font-medium text-gray-900">{person.name}</h3>
+            <dl className="mt-1 flex flex-grow flex-col justify-between">
+              <dt className="sr-only">Title</dt>
+              <dd className="text-sm text-gray-500">{person.title}</dd>
+              <dt className="sr-only">Role</dt>
+              <dd className="mt-3">
+                <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+                  {person.role}
+                </span>
+              </dd>
+          <p className='lowercase'>
+            {person.description}
+          </p>
+            </dl>
+          </div>
+          <div>
+          </div>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -238,21 +293,15 @@ export const metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our committee" title="International Committee">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          
         </p>
       </PageIntro>
 
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
-        <Build />
-        <Deliver />
-      </div>
-
-      <Values />
+      
+<Committee/>
+      
 
       <ContactSection />
     </>
